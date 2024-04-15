@@ -28,7 +28,7 @@ The script assumes that the assessment scores dataset is stored in a CSV file lo
    install.packages("randomForest")
    install.packages("ggplot2")
    ```
-3. Update the file path `"C:/Users/mahit/OneDrive/Desktop/ml/oulad-assessments.csv"` with the actual location of your dataset.
+3. Update the file path `"C:/Users/mahit/OneDrive/Desktop/ml/oulad-assessments.csv"` of dataset.
 4. Execute the R script in your preferred R environment.
 
 ### Additional Notes
