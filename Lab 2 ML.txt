@@ -15,13 +15,13 @@ split <- initial_split(data, prop = 0.8, strata = score)  # Assuming 'score' is 
 training_set <- training(split)
 testing_set <- testing(split)
 
-# Train the model
+# Training model
 model <- randomForest(score ~ ., data = training_set)
 
-# Make predictions
+# Predictions
 predictions <- predict(model, testing_set)
 
-# Convert predictions to factor
+# Conversion of predictions to factor
 predictions <- as.factor(ifelse(predictions > 0.5, 1, 0))  # Assuming 'score' is a binary variable
 
 # Convert testing_set$score to factor if it's not already
@@ -30,8 +30,8 @@ testing_set$score <- as.factor(testing_set$score)
 # Ensure the levels of 'predictions' and 'testing_set$score' are in the same order
 levels(predictions) <- levels(testing_set$score)
 
-# Evaluate the model
+# Evaluation of the model
 confusionMatrix(predictions, testing_set$score)
 
-# Visualize the decision tree
+# Visualization of the model
 plot(model$finalModel, main="Decision Tree Visualization")  # This will produce a basic plot
