@@ -33,4 +33,3 @@ The script assumes that the assessment scores dataset is stored in a CSV file lo
 
 ### Additional Notes
 - Ensure that the target variable in your dataset is labeled as `score`.
-- You may need to adjust the script according to your specific dataset structure or requirements.
