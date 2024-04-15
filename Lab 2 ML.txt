@@ -5,12 +5,11 @@ library(ggplot2)
 
 # Read data from the provided dataset
 file_path <- "C:/Users/mahit/OneDrive/Desktop/ml/oulad-assessments.csv" 
-# Update with the actual file path
 data <- read.csv(file_path)
 data <- na.omit(data)
 
 # First, split the data into a training set and a testing set
-set.seed(123)  # for reproducibility
+set.seed(123)  
 split <- initial_split(data, prop = 0.8, strata = score)  # Assuming 'score' is the target variable
 training_set <- training(split)
 testing_set <- testing(split)
